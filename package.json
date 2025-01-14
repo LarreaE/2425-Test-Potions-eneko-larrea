@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "start": "node src/index.js"
+    "start": "jest"
   },
   "repository": {
     "type": "git",
