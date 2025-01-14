@@ -70,7 +70,7 @@ describe('Cuando los efectos llevan asociado "increase"', () => {
         })
     })
     describe('cuando los ingredientes hacen referencia a distintos atributos (hp, dexterity)', () => {
-        it('no podremos creear el elixir, el nombre no contendrá e"ssence"', () => { //fallo. la pocion si se crea
+        it('FAIL - no podremos creear el elixir, el nombre no contendrá e"ssence"', () => { //fallo. la pocion si se crea
             //arrange		
             const selectedIngredients = falseEssenceMock // usamos ingredientes incorrecots, referencias a charisma y hit_points
             //act
@@ -82,7 +82,7 @@ describe('Cuando los efectos llevan asociado "increase"', () => {
 })
 
 describe('Cuando alguno de los efectos no es "increase"', () => {
-        it('no podremos creear el elixir, el nombre no contendrá "essence"', () => { //fallo. la pocion si se crea
+        it('no podremos creear el elixir, el nombre no contendrá "essence"', () => {
             //arrange		
             const selectedIngredients = falseEssenceMock2 // usamos ingredientes incorrecots, referencias a charisma y hit_points
             //act

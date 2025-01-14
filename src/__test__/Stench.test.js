@@ -69,7 +69,7 @@ describe('Cuando los efectos llevan asociado "decrease"', () => {
         })
     })
     describe('cuando los ingredientes hacen referencia a distintos atributos (hp, dexterity)', () => {
-        it('no podremos creear el stench, el nombre no contendrá stench"', () => { //fallo. la pocion si se crea
+        it('FAIL - no podremos creear el stench, el nombre no contendrá stench"', () => { //fallo. la pocion si se crea
             //arrange		
             const selectedIngredients = falseStenchMock // usamos ingredientes incorrecots, referencias a charisma y hit_points
             //act
