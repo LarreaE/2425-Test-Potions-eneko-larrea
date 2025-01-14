@@ -2,7 +2,7 @@ import  { falseAttrFrenzyMock, falseAttrVenomMock, greaterFrenzyMock, greaterVen
 import {createPotion} from '../index.js'
 
 
-//VENOM
+//ESSENCE
 
 describe('Cuando el numeo de ingredientes es 2-4', () => {
     describe('cuando los efectos en los ingredientes llevan "setback"', () => {

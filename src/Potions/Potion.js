@@ -27,8 +27,6 @@ export default class Potion {
     if (curse) {
       modifiers = curse.modifiers
     }
-    console.log("MODIFIERS")
-    console.log(modifiers)
 
     let id = "id"
     let effectsArray = []
@@ -43,20 +41,17 @@ export default class Potion {
       lowerPotency = ""
     }
     let potion_name = ""
-    console.log(effectsArray)
 
     //same effect
     if (
       effectsArray.every(element => element.effect === effectsArray[0].effect)
     ) {
-      console.log("SAME EFFECT")
       if (
         curse === null &&
         (effectsArray[0].effect === "restore" ||
           effectsArray[0].effect === "damage")
       ) {
         potion_name = "Failed Potion"
-        console.log(potion_name)
         type = "Failed Potion"
         value = 1
         description = "A failed potion, do not consume."
@@ -73,7 +68,6 @@ export default class Potion {
         switch (effectsArray[0].effect) {
           case "increase":
             potion_name = Essence.name(lowerPotency)
-            console.log(potion_name)
             type = "Essence"
             let heal = Essence.calculateMod(effectsArray)
             return new Essence({
@@ -88,7 +82,6 @@ export default class Potion {
           case "decrease":
             potion_name = Stench.name(lowerPotency)
             type = "Stench"
-            console.log(potion_name)
             let damage = Stench.calculateMod(effectsArray)
             return new Stench({
               _id: id,
@@ -101,7 +94,6 @@ export default class Potion {
             })
           case "calm":
             potion_name = `${lowerPotency} ${effectsArray[0].effect} elixir` // calm elixir
-            console.log(potion_name)
             type = "Elixir"
             modifiers = Elixir.calculateMod(effectsArray)
             duration = Elixir.calculateDuration(effectsArray)
@@ -118,7 +110,7 @@ export default class Potion {
             })
           case "frenzy":
             potion_name = `${lowerPotency} ${effectsArray[0].effect} venom`
-            console.log(potion_name)
+            
             type = "Venom"
             modifiers = Venom.calculateMod(effectsArray)
             duration = Venom.calculateDuration(effectsArray)
@@ -135,7 +127,7 @@ export default class Potion {
             })
           case "boost":
             potion_name = `${lowerPotency} ${effectsArray[0].attribute} elixir`
-            console.log(potion_name)
+            
             type = "Elixir"
             modifiers = Elixir.calculateMod(effectsArray)
             duration = Elixir.calculateDuration(effectsArray)
@@ -151,7 +143,7 @@ export default class Potion {
             })
           case "setback":
             potion_name = `${lowerPotency} ${effectsArray[0].attribute} venom`
-            console.log(potion_name)
+            
             type = "Venom"
             modifiers = Venom.calculateMod(effectsArray)
             duration = Elixir.calculateDuration(effectsArray)
@@ -168,7 +160,7 @@ export default class Potion {
             })
           case "restore":
             potion_name = `${lowerPotency} Antidote of ${curse?.name}`
-            console.log(potion_name)
+            
             type = "Antidote"
 
             return new Antidote({
@@ -182,7 +174,7 @@ export default class Potion {
             })
           case "damage":
             potion_name = `${lowerPotency} Poison of ${curse?.name}`
-            console.log(potion_name)
+            
             type = "Poison"
 
             return new Poison({
@@ -197,7 +189,7 @@ export default class Potion {
           //purification potion
           case "cleanse":
             potion_name = Cleanse.name(lowerPotency)
-            console.log(potion_name)
+            
             type = "Cleanse"
 
             return new Cleanse({
@@ -210,7 +202,6 @@ export default class Potion {
             })
           default:
             potion_name = "Failed Potion"
-            console.log(potion_name)
             type = "Failed Potion"
             value = 1
             description = "A failed potion, do not consume."
@@ -227,10 +218,8 @@ export default class Potion {
       }
     } else {
       //not same effect (check antidotes-poison)
-      console.log("NOT ther SAME EFFECT")
       if (curse === null) {
         potion_name = "Failed Potion"
-        console.log(potion_name)
         type = "Failed Potion"
         value = 1
         description = "A failed potion, do not consume."
@@ -265,9 +254,6 @@ function seekCurse(ingredients, curses) {
     })
   })
 
-  console.log("EFFECTS")
-  console.log(ingredientEffects)
-
   // check for poison or antidote effects match in curses
   for (let i = 0; i < curses.length; i++) {
     const poisonMatch = effectsMatch(
@@ -298,7 +284,6 @@ function effectsMatch(curseEffects, ingredientEffects) {
 }
 
 function categorizeEffect(str) {
-  console.log(str)
   str = str.replace("hit_points", "hitpoints")
 
   const parts = str.split("_")
@@ -361,9 +346,6 @@ function checkIngredientCompatibility(effects) {
         potencyTiers[effect1.potency] < potencyTiers[effect2.potency]
           ? effect1
           : effect2
-      console.log(
-        `Triggering action for effect: ${effect1.effect} and attribute: ${effect1.attribute}. Lower potency is: ${lowerPotencyeffect.potency}`
-      )
     }
   }
   return lowerPotencyeffect.potency

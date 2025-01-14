@@ -60,7 +60,6 @@ class Venom {
       if (attributeName === "insanity") {
         modifiers[attributeName] = +modifiers[attributeName] // take into account frenzy and calm and reverse the sign
       }
-      console.log("MODIFIERS OF VENOM: " + modifiers)
       return modifiers
     }
   }
@@ -72,37 +71,41 @@ class Venom {
         element => element.attribute === effectArray[0].attribute
       )
     ) {
+      let durationArray = []
+
       effectArray.forEach(effect => {
         switch (effect.potency) {
           case "least":
-            duration += 1
+            durationArray.push(1)
             break
           case "lesser":
-            duration += 1
+            durationArray.push(1)
             break
           case "greater":
-            duration += 3
+            durationArray.push(3)
             break
           default:
             // no potency or unknown
-            duration += 2
+            durationArray.push(2)
             break
         }
       })
 
-      console.log("DURATION OF VENOM: " + duration)
+      duration = media(durationArray)
+      duration = Math.floor(duration)
       return duration
     }
   }
-}
-function round(value) {
-  return Math.floor(value / 5) * 5
 }
 function media(potencyArray) {
   let sum = potencyArray.reduce((previous, current) => (current += previous))
   let media = sum / potencyArray.length
 
   return media
+}
+
+function round(value) {
+  return Math.floor(value / 5) * 5
 }
 
 export default Venom

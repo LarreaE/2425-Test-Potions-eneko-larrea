@@ -1,16 +1,16 @@
-import  { falseAttrFrenzyMock, falseAttrVenomMock, greaterFrenzyMock, greaterVenomMock, leastFrenzyMock, leastVenomMock, lesserFrenzyMock, lesserVenomMock, mixedFrenzyMock, mixedVenomMock, multipleIngredients, multipleIngredientsVenom, singleIngredient, singleIngredientVenom, voidFrenzyMock, voidVenomMock } from '../mocks/individual.js'
+import  { leastElixiMock, lesserElixirMock, voidElixirMock, greaterElixirMock, mixedElixirMock, falseAttrElixirMock, leastCalmMock, lesserCalmMock, voidCalmMock, greaterCalmMock, mixedCalmMock, falseAttrCalmMock, singleIngredient, multipleIngredients} from '../mocks/individual.js'
 import {createPotion} from '../index.js'
 
 
 //VENOM
 
 describe('Cuando el numeo de ingredientes es 2-4', () => {
-    describe('cuando los efectos en los ingredientes llevan "setback"', () => {
+    describe('cuando los efectos en los ingredientes llevan "boost"', () => {
         describe('Cuando todos los ingredientes tienen el mismo atributo (DEX,INT...)', () => {
             describe('cuando todos los efectos son tipo least', () => {
                 it('El valor resultante del atributo sera la media de los values de los ingredientes. Una vez calculada la media se redondeara al multiplo de 5 inferior', () => {
                     //arrange		
-                    const selectedIngredients = leastVenomMock // usamos ingredientes correctos
+                    const selectedIngredients = leastElixiMock // usamos ingredientes correctos
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -18,7 +18,7 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
                 })
                 it('la duracion sera la media de duraciones de cada ingrediente redondeada para abajo', () => {
                     //arrange		
-                    const selectedIngredients = leastVenomMock // usamos ingredientes correctos
+                    const selectedIngredients = leastElixiMock // usamos ingredientes correctos
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -28,7 +28,7 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
             describe('cuando todos los efectos son tipo lesser', () => {
                 it('El valor resultante del atributo sera la media de los values de los ingredientes. Una vez calculada la media se redondeara al multiplo de 5 inferior', () => {
                     //arrange		
-                    const selectedIngredients = lesserVenomMock // usamos ingredientes correctos
+                    const selectedIngredients = lesserElixirMock // usamos ingredientes correctos
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -36,7 +36,7 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
                 })
                 it('la duracion sera la media de duraciones de cada ingrediente redondeada para abajo', () => {
                     //arrange		
-                    const selectedIngredients = lesserVenomMock // usamos ingredientes correctos
+                    const selectedIngredients = lesserElixirMock // usamos ingredientes correctos
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -46,7 +46,7 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
             describe('cuando todos los efectos son tipo normal ("")', () => {
                 it('El valor resultante del atributo sera la media de los values de los ingredientes. Una vez calculada la media se redondeara al multiplo de 5 inferior', () => {
                     //arrange		
-                    const selectedIngredients = voidVenomMock // usamos ingredientes correctos
+                    const selectedIngredients = voidElixirMock // usamos ingredientes correctos
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -54,7 +54,7 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
                 })
                 it('la duracion sera la media de duraciones de cada ingrediente redondeada para abajo', () => {
                     //arrange		
-                    const selectedIngredients = voidVenomMock // usamos ingredientes correctos
+                    const selectedIngredients = voidElixirMock // usamos ingredientes correctos
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -64,7 +64,7 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
             describe('cuando todos los efectos son tipo greater', () => {
                 it('El valor resultante del atributo sera la media de los values de los ingredientes. Una vez calculada la media se redondeara al multiplo de 5 inferior', () => {
                     //arrange		
-                    const selectedIngredients = greaterVenomMock // usamos ingredientes correctos
+                    const selectedIngredients = greaterElixirMock // usamos ingredientes correctos
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -72,7 +72,7 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
                 })
                 it('la duracion sera la media de duraciones de cada ingrediente redondeada para abajo', () => {
                     //arrange		
-                    const selectedIngredients = greaterVenomMock // usamos ingredientes correctos
+                    const selectedIngredients = greaterElixirMock // usamos ingredientes correctos
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -82,7 +82,7 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
             describe('cuando todos los efectos son tipos diferentes', () => {
                 it('El valor resultante del atributo sera la media de los values de los ingredientes. Una vez calculada la media se redondeara al multiplo de 5 inferior', () => {
                     //arrange		
-                    const selectedIngredients = mixedVenomMock // los ingredientes afectan al dexterity, tenemos 4 (uno de cada tipo)
+                    const selectedIngredients = mixedElixirMock // los ingredientes afectan al dexterity, tenemos 4 (uno de cada tipo)
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -90,7 +90,7 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
                 })
                 it('la duracion sera la media de duraciones de cada ingrediente redondeada para abajo', () => {
                     //arrange		
-                    const selectedIngredients = mixedVenomMock // usamos ingredientes correctos
+                    const selectedIngredients = mixedElixirMock // usamos ingredientes correctos
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -100,39 +100,39 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
             describe('Mismos tiers, comprobar nombre', () => {
                 it('El nombre de la pocion sera Modifier + attribute + Elixir', () => {
                     //arrange		
-                    const selectedIngredients = greaterVenomMock // usamos greater ingredietns
+                    const selectedIngredients = greaterElixirMock // usamos greater ingredietns
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
-                    expect(potion.name).toBe('greater dexterity venom'); // asumimos que el nombre es Greater dexterity elixir
+                    expect(potion.name).toBe('greater dexterity elixir'); // asumimos que el nombre es Greater dexterity elixir
                 })
             })
         })
         describe('Cuando no todos los ingredientes tienen el mismo atributo', () => {
             it('No podremos crear el elixir, el nombre no contendra Elixir', () => {
                 //arrange		
-                const selectedIngredients = falseAttrVenomMock // los ingredientes afectan al dex y al charisma
+                const selectedIngredients = falseAttrElixirMock // los ingredientes afectan al dex y al charisma
                 //act
                 const potion = createPotion(selectedIngredients);                    
                 //assert
-                expect(potion.name).not.toMatch('Venom'); // asumimos que el nombre es Greater dexterity elixir
+                expect(potion.name).not.toMatch('Elixir'); // asumimos que el nombre es Greater dexterity elixir
             })
         })
     })
-    describe('cuando los efectos en los ingredientes llevan "frenzy"', () => {
+    describe('cuando los efectos en los ingredientes llevan "calm"', () => {
         describe('Cuando todos los ingredientes tienen el mismo atributo (insanity)', () => {
             describe('cuando todos los efectos son tipo least', () => {
                 it('El valor resultante del atributo sera la media de los values de los ingredientes. Una vez calculada la media se redondeara al multiplo de 5 inferior', () => {
                     //arrange		
-                    const selectedIngredients = leastFrenzyMock // usamos ingredientes least_calm
+                    const selectedIngredients = leastCalmMock // usamos ingredientes least_calm
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
-                    expect(potion.modifiers.insanity).toBe(5); //los efectos al insanity tienen el signo invertido 
+                    expect(potion.modifiers.insanity).toBe(-5); //los efectos al insanity tienen el signo invertido 
                 })
                 it('la duracion sera la media de duraciones de cada ingrediente redondeada para abajo', () => {
                     //arrange		
-                    const selectedIngredients = leastFrenzyMock // usamos ingredientes least_calm
+                    const selectedIngredients = leastCalmMock // usamos ingredientes least_calm
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -142,15 +142,15 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
             describe('cuando todos los efectos son tipo lesser', () => {
                 it('El valor resultante del atributo sera la media de los values de los ingredientes. Una vez calculada la media se redondeara al multiplo de 5 inferior', () => {
                     //arrange		
-                    const selectedIngredients = lesserFrenzyMock // usamos ingredientes lesser_calm
+                    const selectedIngredients = lesserCalmMock // usamos ingredientes lesser_calm
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
-                    expect(potion.modifiers.insanity).toBe(10); //signo positivo 
+                    expect(potion.modifiers.insanity).toBe(-10); //signo negativo 
                 })
                 it('la duracion sera la media de duraciones de cada ingrediente redondeada para abajo', () => {
                     //arrange		
-                    const selectedIngredients = lesserFrenzyMock // usamos ingredientes lesser_calm
+                    const selectedIngredients = lesserCalmMock // usamos ingredientes lesser_calm
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -160,15 +160,15 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
             describe('cuando todos los efectos son tipo normal ("")', () => {
                 it('El valor resultante del atributo sera la media de los values de los ingredientes. Una vez calculada la media se redondeara al multiplo de 5 inferior', () => {
                     //arrange		
-                    const selectedIngredients = voidFrenzyMock // usamos ingredientes calm
+                    const selectedIngredients = voidCalmMock // usamos ingredientes calm
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
-                    expect(potion.modifiers.insanity).toBe(15); //signo positivo 
+                    expect(potion.modifiers.insanity).toBe(-15); //signo negativo 
                 })
                 it('la duracion sera la media de duraciones de cada ingrediente redondeada para abajo', () => {
                     //arrange		
-                    const selectedIngredients = voidFrenzyMock // usamos ingredientes calm
+                    const selectedIngredients = voidCalmMock // usamos ingredientes calm
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -178,15 +178,15 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
             describe('cuando todos los efectos son tipo greater', () => {
                 it('El valor resultante del atributo sera la media de los values de los ingredientes. Una vez calculada la media se redondeara al multiplo de 5 inferior', () => {
                     //arrange		
-                    const selectedIngredients = greaterFrenzyMock // usamos ingredientes greater_calm
+                    const selectedIngredients = greaterCalmMock // usamos ingredientes greater_calm
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
-                    expect(potion.modifiers.insanity).toBe(20); //signo positivo
+                    expect(potion.modifiers.insanity).toBe(-20); //signo negativo
                 })
                 it('la duracion sera la media de duraciones de cada ingrediente redondeada para abajo', () => {
                     //arrange		
-                    const selectedIngredients = greaterFrenzyMock 
+                    const selectedIngredients = greaterCalmMock // usigno ngevativo
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -196,15 +196,15 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
             describe('cuando todos los efectos son tipos diferentes', () => {
                 it('El valor resultante del atributo sera la media de los values de los ingredientes. Una vez calculada la media se redondeara al multiplo de 5 inferior', () => {
                     //arrange		
-                    const selectedIngredients = mixedFrenzyMock // los ingredientes afectan al insanity(frenzy), tenemos 4 (uno de cada tipo)
+                    const selectedIngredients = mixedCalmMock // los ingredientes afectan al insanity(calm), tenemos 4 (uno de cada tipo)
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
-                    expect(potion.modifiers.insanity).toBe(10); //los ingredientes escogidos afectan al insanity, la media de los dos ingreds (5-10-15-20) normales redondeada al multiplo de 5 inferior = 12,5 => 10 
+                    expect(potion.modifiers.insanity).toBe(-10); //los ingredientes escogidos afectan al insanity, la media de los dos ingreds (5-10-15-20) normales redondeada al multiplo de 5 inferior = 12,5 => 10 
                 })
                 it('la duracion sera la media de duraciones de cada ingrediente redondeada para abajo', () => {
                     //arrange		
-                    const selectedIngredients = mixedFrenzyMock // usamos ingredientes correctos
+                    const selectedIngredients = mixedCalmMock // usamos ingredientes correctos
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
@@ -214,18 +214,18 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
             describe('Mismos tiers, comprobar nombre', () => {
                 it('El nombre de la pocion sera Modifier + attribute + Elixir', () => {
                     //arrange		
-                    const selectedIngredients = greaterFrenzyMock // usamos greater ingredietns
+                    const selectedIngredients = greaterCalmMock // usamos greater ingredietns
                     //act
                     const potion = createPotion(selectedIngredients);                    
                     //assert
-                    expect(potion.name).toBe('greater frenzy venom'); // asumimos que el nombre es Greater frenzy venom
+                    expect(potion.name).toBe('greater calm elixir'); // asumimos que el nombre es Greater dexterity elixir
                 })
             })
         })
         describe('Cuando no todos los ingredientes tienen el mismo effecto (calm)', () => {
             it('No podremos crear el elixir, el nombre no contendra Elixir', () => {
                 //arrange		
-                const selectedIngredients = falseAttrFrenzyMock // los ingredientes son calm y boost charisma
+                const selectedIngredients = falseAttrCalmMock // los ingredientes son calm y boost charisma
                 //act
                 const potion = createPotion(selectedIngredients);                    
                 //assert
@@ -238,18 +238,18 @@ describe('Cuando el numeo de ingredientes es 2-4', () => {
 describe('FAIL - Si el numero de ingredientes es menor a 2 o mayor a 4', () => { //este test fallará, en la apk no es posible insertar un solo ingrediente, pero al caldero de pociones si.
     it('FAIL - El nombre de la pocion no sera correcto con 1 ingrediente', () => {
         //arrange		
-        const selectedIngredients = singleIngredientVenom // usamos un solo ingrediente
+        const selectedIngredients = singleIngredient // usamos un solo ingrediente
         //act
         const potion = createPotion(selectedIngredients);                    
         //assert
-        expect(potion.name).not.toMatch('venom'); // asumimos que el nombre no contendrá elixir
+        expect(potion.name).not.toMatch('elixir'); // asumimos que el nombre no contendrá elixir
     })
     it('FAIL - El nombre de la pocion no sera correcto con 5 ingredientes', () => { //este test fallará, en la apk no es posible insertar mas de 4 ingredientes, pero al caldero de pociones si se le pueden meter hardcodeadas.
         //arrange		
-        const selectedIngredients = multipleIngredientsVenom // usamos 5 ingredientes
+        const selectedIngredients = multipleIngredients // usamos 5 ingredientes
         //act
         const potion = createPotion(selectedIngredients);                    
         //assert
-        expect(potion.name).not.toMatch('venom'); // asumimos que el nombre no contendrá elixir
+        expect(potion.name).not.toMatch('elixir'); // asumimos que el nombre no contendrá elixir
     })
 })

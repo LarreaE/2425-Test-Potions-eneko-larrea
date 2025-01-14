@@ -15,7 +15,6 @@ export const createPotion = (selectedIngredients) => {
     // });
 
     const potionIngredients = selectedIngredients;
-    console.log('Selected Ingredients for Potion:', potionIngredients);
 
     try {
       const newpotion = Potion.create(potionIngredients, curses);

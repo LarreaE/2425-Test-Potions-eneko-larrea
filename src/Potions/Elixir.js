@@ -60,7 +60,6 @@ class Elixir {
       if (attributeName === "insanity") {
         modifiers[attributeName] = -modifiers[attributeName] // take into account frenzy and calm and reverse sign
       }
-      console.log("MODIFIERS OF ELIXIR: " + modifiers)
       return modifiers
     }
   }
@@ -94,7 +93,6 @@ class Elixir {
 
       duration = media(durationArray)
       duration = Math.floor(duration)
-      console.log("DURATION OF ELIXIR: " + duration)
       return duration
     }
   }

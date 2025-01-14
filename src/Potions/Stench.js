@@ -54,7 +54,6 @@ class Stench {
     }
 
     damageValue = Math.ceil(damageValue)
-    console.log("MODIFIERS OF STENCH: " + damageValue)
     return -damageValue
   }
   static name(potency) {

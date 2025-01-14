@@ -266,8 +266,6 @@ export const mixedCalmMock = [
     "type": "ingredient"
   },
 ]
-
-
 export const falseAttrElixirMock = [
   {
     "_id": "6702b4f876863c206a48cd27",
@@ -425,6 +423,76 @@ export const singleIngredient = [
     "type": "ingredient"
   },
 ]
+export const singleIngredientVenom = [
+  {
+    "_id": "6702b56a76863c206a48cd46",
+    "name": "Quieting Root",
+    "description": "A root that brings about a gentle peace of mind with every consumption.",
+    "value": 6,
+    "effects": [
+      "least_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_4.webp",
+    "type": "ingredient"
+  },
+]
+export const multipleIngredientsVenom = [
+  {
+    "_id": "6702b56a76863c206a48cd46",
+    "name": "Quieting Root",
+    "description": "A root that brings about a gentle peace of mind with every consumption.",
+    "value": 6,
+    "effects": [
+      "least_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_4.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b56a76863c206a48cd46",
+    "name": "Quieting Root",
+    "description": "A root that brings about a gentle peace of mind with every consumption.",
+    "value": 6,
+    "effects": [
+      "least_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_4.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b56a76863c206a48cd46",
+    "name": "Quieting Root",
+    "description": "A root that brings about a gentle peace of mind with every consumption.",
+    "value": 6,
+    "effects": [
+      "least_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_4.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b56a76863c206a48cd46",
+    "name": "Quieting Root",
+    "description": "A root that brings about a gentle peace of mind with every consumption.",
+    "value": 6,
+    "effects": [
+      "least_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_4.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b56a76863c206a48cd46",
+    "name": "Quieting Root",
+    "description": "A root that brings about a gentle peace of mind with every consumption.",
+    "value": 6,
+    "effects": [
+      "least_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_4.webp",
+    "type": "ingredient"
+  },
+]
 export const multipleIngredients = [
   {
     "_id": "6702b56a76863c206a48cd46",
@@ -506,7 +574,6 @@ export const falseAntidoteMock = [
       "type": "ingredient"
     },
 ]
-
 export const gravechillMock = {
   "modifiers": {
     "hit_points": -45,
@@ -530,3 +597,342 @@ export const gravechillMock = {
     "lesser_damage_constitution"
   ]
 }
+
+
+export const leastVenomMock = [
+  {
+    "_id": "6702b4f876863c206a48cd20",
+    "name": "Radiant Petal",
+    "description": "A petal that enhances charisma with its ethereal glow.",
+    "value": 9,
+    "effects": [
+      "least_setback_charisma"
+    ],
+    "image": "/images/ingredients/boost/boost_13.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd20",
+    "name": "Radiant Petal",
+    "description": "A petal that enhances charisma with its ethereal glow.",
+    "value": 9,
+    "effects": [
+      "least_setback_charisma"
+    ],
+    "image": "/images/ingredients/boost/boost_13.webp",
+    "type": "ingredient"
+  },
+]
+
+export const lesserVenomMock = [
+  {
+    "_id": "6702b4f876863c206a48cd1c",
+    "name": "Frostmoss",
+    "description": "A cold moss that increases agility and dexterity.",
+    "value": 35,
+    "effects": [
+      "lesser_setback_dexterity"
+    ],
+    "image": "/images/ingredients/boost/boost_9.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd1c",
+    "name": "Frostmoss",
+    "description": "A cold moss that increases agility and dexterity.",
+    "value": 35,
+    "effects": [
+      "lesser_setback_dexterity"
+    ],
+    "image": "/images/ingredients/boost/boost_9.webp",
+    "type": "ingredient"
+  },
+]
+
+export const voidVenomMock = [
+  {
+    "_id": "6702b4f876863c206a48cd26",
+    "name": "Dreamer's Dew",
+    "description": "A dewdrop that enhances charisma and inspires dreams.",
+    "value": 72,
+    "effects": [
+      "boost_charisma"
+    ],
+    "image": "/images/ingredients/boost/boost_19.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd26",
+    "name": "Dreamer's Dew",
+    "description": "A dewdrop that enhances charisma and inspires dreams.",
+    "value": 72,
+    "effects": [
+      "boost_charisma"
+    ],
+    "image": "/images/ingredients/boost/boost_19.webp",
+    "type": "ingredient"
+  },
+]
+
+export const greaterVenomMock = [
+  {
+    "_id": "6702b4f876863c206a48cd27",
+    "name": "Lion's Mane Fern",
+    "description": "A fern that grants greater agility and dexterity.",
+    "value": 165,
+    "effects": [
+      "greater_setback_dexterity"
+    ],
+    "image": "/images/ingredients/boost/boost_20.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd27",
+    "name": "Lion's Mane Fern",
+    "description": "A fern that grants greater agility and dexterity.",
+    "value": 165,
+    "effects": [
+      "greater_setback_dexterity"
+    ],
+    "image": "/images/ingredients/boost/boost_20.webp",
+    "type": "ingredient"
+  },
+]
+
+export const mixedVenomMock = [
+  {
+    "_id": "6702b4f876863c206a48cd27",
+    "name": "Lion's Mane Fern",
+    "description": "A fern that grants greater agility and dexterity.",
+    "value": 165,
+    "effects": [
+      "greater_setback_dexterity"
+    ],
+    "image": "/images/ingredients/boost/boost_20.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd26",
+    "name": "Dreamer's Dew",
+    "description": "A dewdrop that enhances charisma and inspires dreams.",
+    "value": 72,
+    "effects": [
+      "setback_dexterity"
+    ],
+    "image": "/images/ingredients/boost/boost_19.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd1c",
+    "name": "Frostmoss",
+    "description": "A cold moss that increases agility and dexterity.",
+    "value": 35,
+    "effects": [
+      "lesser_setback_dexterity"
+    ],
+    "image": "/images/ingredients/boost/boost_9.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd20",
+    "name": "Radiant Petal",
+    "description": "A petal that enhances charisma with its ethereal glow.",
+    "value": 9,
+    "effects": [
+      "least_setback_dexterity"
+    ],
+    "image": "/images/ingredients/boost/boost_13.webp",
+    "type": "ingredient"
+  },
+]
+
+export const mixedFrenzyMock = [
+  {
+    "_id": "6702b4f876863c206a48cd27",
+    "name": "Lion's Mane Fern",
+    "description": "A fern that grants greater agility and dexterity.",
+    "value": 165,
+    "effects": [
+      "greater_frenzy"
+    ],
+    "image": "/images/ingredients/boost/boost_20.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd26",
+    "name": "Dreamer's Dew",
+    "description": "A dewdrop that enhances charisma and inspires dreams.",
+    "value": 72,
+    "effects": [
+      "frenzy"
+    ],
+    "image": "/images/ingredients/boost/boost_19.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd1c",
+    "name": "Frostmoss",
+    "description": "A cold moss that increases agility and dexterity.",
+    "value": 35,
+    "effects": [
+      "lesser_frenzy"
+    ],
+    "image": "/images/ingredients/boost/boost_9.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd20",
+    "name": "Radiant Petal",
+    "description": "A petal that enhances charisma with its ethereal glow.",
+    "value": 9,
+    "effects": [
+      "least_frenzy"
+    ],
+    "image": "/images/ingredients/boost/boost_13.webp",
+    "type": "ingredient"
+  },
+]
+export const falseAttrVenomMock = [
+  {
+    "_id": "6702b4f876863c206a48cd27",
+    "name": "Lion's Mane Fern",
+    "description": "A fern that grants greater agility and dexterity.",
+    "value": 165,
+    "effects": [
+      "greater_setback_dexterity"
+    ],
+    "image": "/images/ingredients/boost/boost_20.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd27",
+    "name": "Lion's Mane Fern",
+    "description": "A fern that grants greater agility and dexterity.",
+    "value": 165,
+    "effects": [
+      "greater_setback_charisma"
+    ],
+    "image": "/images/ingredients/boost/boost_20.webp",
+    "type": "ingredient"
+  },
+]
+export const falseAttrFrenzyMock = [
+  {
+    "_id": "6702b4f876863c206a48cd27",
+    "name": "Lion's Mane Fern",
+    "description": "A fern that grants greater agility and dexterity.",
+    "value": 165,
+    "effects": [
+      "greater_frenzy"
+    ],
+    "image": "/images/ingredients/boost/boost_20.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b4f876863c206a48cd27",
+    "name": "Lion's Mane Fern",
+    "description": "A fern that grants greater agility and dexterity.",
+    "value": 165,
+    "effects": [
+      "greater_setback_charisma"
+    ],
+    "image": "/images/ingredients/boost/boost_20.webp",
+    "type": "ingredient"
+  },
+]
+export const leastFrenzyMock = [
+  {
+    "_id": "6702b56a76863c206a48cd46",
+    "name": "Quieting Root",
+    "description": "A root that brings about a gentle peace of mind with every consumption.",
+    "value": 6,
+    "effects": [
+      "least_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_4.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b56a76863c206a48cd46",
+    "name": "Quieting Root",
+    "description": "A root that brings about a gentle peace of mind with every consumption.",
+    "value": 6,
+    "effects": [
+      "least_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_4.webp",
+    "type": "ingredient"
+  }
+]
+export const lesserFrenzyMock = [
+  {
+    "_id": "6702b56a76863c206a48cd45",
+    "name": "Peaceful Herb",
+    "description": "An herb known for its ability to alleviate stress and minor insanity.",
+    "value": 32,
+    "effects": [
+      "lesser_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_3.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b56a76863c206a48cd45",
+    "name": "Peaceful Herb",
+    "description": "An herb known for its ability to alleviate stress and minor insanity.",
+    "value": 32,
+    "effects": [
+      "lesser_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_3.webp",
+    "type": "ingredient"
+  }
+]
+export const voidFrenzyMock = [
+  {
+    "_id": "6702b56a76863c206a48cd45",
+    "name": "Peaceful Herb",
+    "description": "An herb known for its ability to alleviate stress and minor insanity.",
+    "value": 32,
+    "effects": [
+      "frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_3.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b56a76863c206a48cd45",
+    "name": "Peaceful Herb",
+    "description": "An herb known for its ability to alleviate stress and minor insanity.",
+    "value": 32,
+    "effects": [
+      "frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_3.webp",
+    "type": "ingredient"
+  }
+]
+export const greaterFrenzyMock = [
+  {
+    "_id": "6702b56a76863c206a48cd45",
+    "name": "Peaceful Herb",
+    "description": "An herb known for its ability to alleviate stress and minor insanity.",
+    "value": 32,
+    "effects": [
+      "greater_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_3.webp",
+    "type": "ingredient"
+  },
+  {
+    "_id": "6702b56a76863c206a48cd45",
+    "name": "Peaceful Herb",
+    "description": "An herb known for its ability to alleviate stress and minor insanity.",
+    "value": 32,
+    "effects": [
+      "greater_frenzy"
+    ],
+    "image": "/images/ingredients/calm/calm_3.webp",
+    "type": "ingredient"
+  }
+]
