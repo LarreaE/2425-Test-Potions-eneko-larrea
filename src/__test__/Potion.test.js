@@ -1,18 +1,27 @@
-import Potion from '../Potions/Potion.js';
+import Potion from '../Potions/Potion.js'
+import  { antidoteMock } from '../mocks/ingredients.js'
+import curses from '../mocks/curses.json'
+import {createPotion} from '../index.js'
 
-describe('Cuando todos los ingredientes', () => {
-	it('should return the string in lowercase and plural', () => {
-		const result = transformStringLowerPlural(lowerPlural);
-		expect(result).toBe('boots');
+describe('Cuando todos los ingredientes llevan effecto "restore"', () => {
+	it('El nombre deberá ser correspondiente. Antidote of + "nombre enfermedad"', () => {
+        //arrange		
+        const selectedIngredients = antidoteMock  //usamos los ingredientes apropiados para crear gravechill
+        //act
+		const potion = createPotion(selectedIngredients);
+		console.log(potion);
+		
+        //assert
+		expect(potion.name).toBe('lesser Antidote of Gravechill');
 	})
-    
-	it('should return the strings with the first letter to Uppercase and changed into singular', () => {
-		const result = transformStringPlural(plural);
-		expect(result).toBe('Boot');
-	})
-
-    it('should return the string firstletter Uppercase and changed it into plural', () => {
-		const result = transformStringSingular(singular);
-		expect(result).toBe('Boots');
+    it('El nombre deberá ser correspondiente. Antidote of + "nombre enfermedad"', () => {
+        //arrange		
+        const selectedIngredients = antidoteMock
+        //act
+		const potion = createPotion(selectedIngredients);
+		console.log(potion);
+		
+        //assert
+		expect(potion.name).toBe('lesser Antidote of Gravechill');
 	})
 })
