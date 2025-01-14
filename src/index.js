@@ -1,12 +1,10 @@
 import Potion from "./Potions/Potion.js";
 import { getIngredients, getCurses } from "./data.js";
-import { antidoteMock } from "./mocks/ingredients.js";
+import { antidoteMock } from "./mocks/individual.js";
 import curses from './mocks/curses.json'
 
 
-export const createPotion = (selectedIngredients) => {
-    console.log('createPotion called with:', selectedIngredients);
-  
+export const createPotion = (selectedIngredients) => {  
     // const potionIngredients = Object.keys(selectedIngredients).flatMap(id => {
     //   const ingredient = allIngredients.find(ing => ing._id === id);
     //   const quantity = selectedIngredients[id];
@@ -30,7 +28,6 @@ export const createPotion = (selectedIngredients) => {
   
   const antidote = createPotion(antidoteMock)
 
-  console.log(antidote);
   
   
   
