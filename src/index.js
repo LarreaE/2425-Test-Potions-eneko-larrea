@@ -1,18 +1,14 @@
 import Potion from "./Potions/Potion.js";
 import { getIngredients, getCurses } from "./data.js";
-import { antidoteMock } from "./mocks/individual.js";
+import { antidoteMock, falseAntidoteMock } from "./mocks/individual.js";
 import curses from './mocks/curses.json'
 
 
 export const createPotion = (selectedIngredients) => {  
-    // const potionIngredients = Object.keys(selectedIngredients).flatMap(id => {
-    //   const ingredient = allIngredients.find(ing => ing._id === id);
-    //   const quantity = selectedIngredients[id];
-    //   if (ingredient) {
-    //     return Array(quantity).fill({ ...ingredient });
-    //   }
-    //   return [];
-    // });
+  
+    if (selectedIngredients.length > 4 || selectedIngredients.length < 2) {
+      return Potion.create(falseAntidoteMock,curses)
+    }
 
     const potionIngredients = selectedIngredients;
 

@@ -51,7 +51,7 @@ export default class Potion {
         (effectsArray[0].effect === "restore" ||
           effectsArray[0].effect === "damage")
       ) {
-        potion_name = "Failed Potion"
+        potion_name = "Tonic of Downfall"
         type = "Failed Potion"
         value = 1
         description = "A failed potion, do not consume."
